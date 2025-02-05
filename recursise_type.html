@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursive types</title>
+</head>
+<body>
+    <script>
+
+   let money = 100;
+   let totalApple = 0;
+
+   function buyApple(x) {
+    if (x > 0) {
+        totalApple++;
+        buyMoreApple(x - 10);
+    }
+    console.log(`Total apples bought: ${totalApple}, Money left: ${money - (totalApple * 10)}`);
+   };
+
+   function buyMoreApple(x) {
+    if (x > 0) {
+        totalApple++;
+     
+        buyMoreApple(x - 10);
+        console.warn(x);
+    }
+   }
+
+   buyApple(money);
+
+    </script>
+
+
+
+
+
+
+
+</body>
+</html>
